@@ -6,7 +6,7 @@ const data = {
   menus: [{ text: "Home", icon: <HomeIcon />, link: "/dashboard" }],
   user: {
     userName: `${Faker.name.firstName()} ${Faker.name.lastName()}`,
-    avatar: "https://randomuser.me/api/",
+    avatar: "https://randomuser.me/api",
   },
   tablePage: {
     items: Array.from({ length: 105 }, (item, index) => ({
