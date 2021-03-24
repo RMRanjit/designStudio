@@ -17,7 +17,7 @@ const DashboardPage = () => {
         payLoad={data.catalog
           .sort((a, b) => (a.recentlyUsed > b.recentlyUsed ? 1 : -1))
           .slice(0, config.recentCount)}
-        header="Most Recently used"
+        header="Recently used"
       />
     </div>
   );
