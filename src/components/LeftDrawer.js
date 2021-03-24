@@ -7,7 +7,6 @@ import Avatar from "@material-ui/core/Avatar";
 import { withStyles } from "@material-ui/core/styles";
 
 import Menus from "./Menus";
-import data from "../data";
 
 const drawStyles = (theme) => {
   return {
@@ -79,11 +78,11 @@ const LeftDrawer = (props) => {
         )}
       >
         <Avatar
-          src={data.user.avatar}
+          src={props.user.avatar}
           size={navDrawerOpen ? 48 : 32}
           classes={{ root: classes.avatarIcon }}
         />
-        <span className={classes.avatarSpan}>{data.user.userName}</span>
+        <span className={classes.avatarSpan}>{props.user.userName}</span>
       </div>
       <Menus menus={props.menus} navDrawerOpen={navDrawerOpen} />
     </div>

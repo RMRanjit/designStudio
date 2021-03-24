@@ -6,13 +6,14 @@ import { withStyles } from "@material-ui/core/styles";
 import Header from "../components/Header";
 import LeftDrawer from "../components/LeftDrawer";
 import RightDrawer from "../components/RightDrawer";
-import Data from "../data";
+import menuItems from "../data/menuItems";
 import Dashboard from "./DashboardPage";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Form from "./FormPage";
 import NotFound from "./NotFoundPage";
 import { ThemeProvider } from "@material-ui/core/styles";
 import defaultTheme, { customTheme } from "../theme";
+import data from "../data/data";
 
 const styles = () => ({
   container: {
@@ -101,7 +102,8 @@ class App extends React.Component {
         <LeftDrawer
           navDrawerOpen={navDrawerOpen}
           handleChangeNavDrawer={this.handleChangeNavDrawer}
-          menus={Data.menus}
+          menus={menuItems.menus}
+          user={data.user}
         />
         <ButtonBase
           color="inherit"
